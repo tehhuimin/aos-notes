@@ -73,17 +73,26 @@ Time-sensitive Linux
 
 ### Reducing Kernel Preemption Latency
 
-
-
 ![image-20230425120519921](assets/image-20230425120519921.png)
 
 
 
-
+### Reducing Scheduling Latency  
 
 ![image-20230425120531096](assets/image-20230425120531096.png)
 
+- **Propotional Period Scheduling** 
+  - Q & T adjustable
+  - For <u>admission control</u>
+  - Provide temporal protection
+  - While supporting timeliness of time sensitive task, the ts-linux can reserve a portion to run throughput oriented tasks. 
+- **Priority-based Scheduling** 
+  - C1 make a blocking call to a low priority server, server will execute. C2 (higher priority than server) can continue to run. C2 will continue run.  => Priority inversion
+  - We need the server will assume priority of C1, so that C2 will not be able to run. => no inversion
 
 
 
+### Conclusion
+
+- 3 sources of latency: timer latency, kernel preemption latency, scheduling latency
 
