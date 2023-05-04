@@ -1,4 +1,4 @@
-# **[24 Jan 2023] **Intro to AOS and OS Structures
+# [24 Jan 2023] Intro to AOS and OS Structures
 
 - Extremes of OS structures (generality vs specialization)
 
